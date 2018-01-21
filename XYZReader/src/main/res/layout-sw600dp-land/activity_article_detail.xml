@@ -4,8 +4,9 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
-        android:layout_width="match_parent"
+        android:layout_width="@dimen/detail_width"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:layout_marginTop="@dimen/margin_large"
-        />
+        android:elevation="@dimen/fab_elevation"/>
 </android.support.design.widget.CoordinatorLayout>

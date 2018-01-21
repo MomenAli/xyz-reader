@@ -15,11 +15,17 @@
         android:layout_height="wrap_content">
 
         <!--suppress AndroidLintContentDescription -->
-        <com.example.xyzreader.ui.DynamicHeightNetworkImageView
+        <com.android.volley.toolbox.NetworkImageView
             android:id="@+id/thumbnail"
             android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:background="@color/photo_placeholder"/>
+        <View
+            android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/photo_placeholder" />
+            android:alpha=".5"
+            android:background="@drawable/scrim"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,7 +44,9 @@
                 android:paddingLeft="16dp"
                 android:paddingRight="16dp"
                 android:paddingTop="16dp"
-                android:textColor="@color/ltblack" />
+
+                android:textColor="@color/ltwhite"
+                android:textSize="@dimen/article_title_text_size"/>
 
             <TextView
                 android:id="@+id/article_subtitle"
@@ -49,8 +57,10 @@
                 android:maxLines="2"
                 android:paddingBottom="16dp"
                 android:paddingLeft="16dp"
+                android:shadowColor="@color/ltblack"
                 android:paddingRight="16dp"
-                android:textColor="#6000" />
+                android:textColor="@color/ltgray"
+                android:textSize="@dimen/article_subtitle_text_size"/>
         </LinearLayout>
     </FrameLayout>
 
