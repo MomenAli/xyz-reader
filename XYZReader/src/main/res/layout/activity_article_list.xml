@@ -24,13 +24,13 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/appbar_elevation">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/toolbar_container"
             android:layout_width="match_parent"
             android:layout_height="112dp"
-            android:elevation="8dp"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             >
 

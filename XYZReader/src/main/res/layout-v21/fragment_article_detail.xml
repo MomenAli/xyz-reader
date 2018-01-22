@@ -1,14 +1,15 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/coordinatorLayout"
+    android:elevation="8dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:layout_gravity="center_horizontal">
+    android:layout_height="match_parent">
+
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:elevation="@dimen/appbar_elevation">
+        android:elevation="@dimen/appbar_elevation"
+        android:layout_height="wrap_content">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/photo_container"
@@ -16,7 +17,7 @@
             android:layout_height="match_parent"
             android:background="@color/photo_placeholder"
             app:collapsedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
-            app:contentScrim="?colorPrimary"
+            app:contentScrim="?attr/colorPrimary"
             app:expandedTitleMarginStart="72dp"
             app:expandedTitleTextAppearance="@style/TextAppearance.AppCompat.Widget.ActionBar.Title.Inverse"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
@@ -46,8 +47,8 @@
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="@dimen/sur_elevation"
         android:nestedScrollingEnabled="true"
+        android:elevation="@dimen/sur_elevation"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
@@ -108,7 +109,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
+        android:layout_margin="@dimen/margin_large"
         android:src="@drawable/ic_share"
         app:borderWidth="0dp"
         android:tint="@android:color/black"
