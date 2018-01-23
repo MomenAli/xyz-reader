@@ -1,4 +1,4 @@
-package com.example;
+package com.example.xyzreader.ui;
 
 import android.content.Context;
 import android.support.design.widget.CoordinatorLayout;
@@ -32,7 +32,18 @@ public class ScrollAwareFABBehavior extends CoordinatorLayout.Behavior<FloatingA
         super.onNestedScroll(coordinatorLayout, child, target, dxConsumed, dyConsumed,dxUnconsumed, dyUnconsumed);
 
         if (dyConsumed > 0 && child.getVisibility() == View.VISIBLE) {
-            child.hide();
+            child.hide(new FloatingActionButton.OnVisibilityChangedListener() {
+                @Override
+                public void onShown(FloatingActionButton fab) {
+                    super.onShown(fab);
+                }
+
+                @Override
+                public void onHidden(FloatingActionButton fab) {
+                    super.onHidden(fab);
+                    child.setVisibility(View.INVISIBLE);
+                }
+            });
         } else if (dyConsumed < 0 && child.getVisibility() != View.VISIBLE) {
             child.show();
         }
