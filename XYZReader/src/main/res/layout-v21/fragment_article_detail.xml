@@ -1,13 +1,14 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/coordinatorLayout"
-    android:elevation="8dp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
 
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
+        android:id="@+id/appBar"
         android:elevation="@dimen/appbar_elevation"
         android:layout_height="wrap_content">
 
@@ -108,6 +109,7 @@
         android:id="@+id/share_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/margin_large"
         android:src="@drawable/ic_share"
@@ -115,5 +117,5 @@
         android:tint="@android:color/black"
         app:elevation="@dimen/fab_elevation"
         app:fabSize="normal"
-        app:pressedTranslationZ="12dp" />
+        app:pressedTranslationZ="@dimen/translation_value" />
 </android.support.design.widget.CoordinatorLayout>

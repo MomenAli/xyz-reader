@@ -8,6 +8,7 @@
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
+        android:id="@+id/appBar"
         android:elevation="@dimen/appbar_elevation"
         android:layout_height="wrap_content">
 
@@ -108,12 +109,13 @@
         android:id="@+id/share_fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/margin_large"
         android:src="@drawable/ic_share"
         app:elevation="@dimen/fab_elevation"
         app:borderWidth="0dp"
         android:tint="@android:color/black"
         app:fabSize="normal"
-        app:pressedTranslationZ="12dp" />
+        app:pressedTranslationZ="@dimen/translation_value"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed"
+        android:layout_gravity="bottom|end"/>
 </android.support.design.widget.CoordinatorLayout>
