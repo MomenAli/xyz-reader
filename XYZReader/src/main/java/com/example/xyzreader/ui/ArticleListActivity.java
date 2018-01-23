@@ -24,7 +24,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
-
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
@@ -50,14 +49,14 @@ public class ArticleListActivity extends AppCompatActivity implements
     private SwipeRefreshLayout mSwipeRefreshLayout;
     private RecyclerView mRecyclerView;
     View toolbarContainerView;
-    Context mContext;
+Context mContext;
     private SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.sss");
     // Use default locale format
     private SimpleDateFormat outputFormat = new SimpleDateFormat();
     // Most time functions can only handle 1902 - 2037
-    private GregorianCalendar START_OF_EPOCH = new GregorianCalendar(2, 1, 1);
+    private GregorianCalendar START_OF_EPOCH = new GregorianCalendar(2,1,1);
 
-    public ArticleListActivity() {
+    public ArticleListActivity(){
     }
 
     @Override
@@ -72,7 +71,7 @@ public class ArticleListActivity extends AppCompatActivity implements
         ConnectivityManager cm = (ConnectivityManager) getSystemService(CONNECTIVITY_SERVICE);
         NetworkInfo ni = cm.getActiveNetworkInfo();
         if (ni == null || !ni.isConnected()) {
-            Snackbar make = Snackbar.make(toolbarContainerView, getString(R.string.connectionError), Snackbar.LENGTH_LONG).setAction("Action", null);
+            Snackbar make = Snackbar.make(toolbarContainerView, getString(R.string.connectionError), Snackbar.LENGTH_LONG).setAction("Action",null);
             make.show();
             Log.w(TAG, getString(R.string.connectionError));
         }
@@ -198,12 +197,13 @@ public class ArticleListActivity extends AppCompatActivity implements
             } else {
                 holder.subtitleView.setText(Html.fromHtml(
                         outputFormat.format(publishedDate)
-                                + "<br/>" + " by "
-                                + mCursor.getString(ArticleLoader.Query.AUTHOR)));
+                        + "<br/>" + " by "
+                        + mCursor.getString(ArticleLoader.Query.AUTHOR)));
             }
             holder.thumbnailView.setImageUrl(
                     mCursor.getString(ArticleLoader.Query.THUMB_URL),
                     ImageLoaderHelper.getInstance(ArticleListActivity.this).getImageLoader());
+
             holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
         }
 
