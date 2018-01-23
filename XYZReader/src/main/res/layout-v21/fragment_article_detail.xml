@@ -115,6 +115,7 @@
         android:src="@drawable/ic_share"
         app:borderWidth="0dp"
         android:tint="@android:color/black"
+        app:layout_behavior="com.example.ScrollAwareFABBehavior"
         app:elevation="@dimen/fab_elevation"
         app:fabSize="normal"
         app:pressedTranslationZ="@dimen/translation_value" />
