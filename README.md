@@ -9,8 +9,6 @@ In this project, this app will be redesign to follow the Material Design guideli
 
 ![alt text](https://github.com/MomenAli/xyz-reader/blob/master/DetailsActivity1.png)
 
-![alt text](https://github.com/MomenAli/xyz-reader/blob/master/DetailsActivity2.png)
-
 ![alt text](https://github.com/MomenAli/xyz-reader/blob/master/DetailsActivity3.png)
 
 
